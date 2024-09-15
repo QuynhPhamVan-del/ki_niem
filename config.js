@@ -15,5 +15,5 @@ const CONFIG = {
     mess: 'Anh biết mà 🥰. Yêu em nhiều nhiều 😘😘',
     messDesc: 'Hạnh phúc của anh là có em đó hihi.',
     btnAccept: 'Điều đặc biệt',
-    messLink: '/video.html' 
+    messLink: 'https://quynhphamvan-del.github.io/ki_niem//video.html' 
 }
