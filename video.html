@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Thế giới của anh</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/spinload.css">
+    <link rel="stylesheet" type="text/css" href=" https://fonts.googleapis.com/css?family=Pacifico" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <style>
+          body {
+              font-family: Arial, sans-serif;
+              margin: 0;
+              padding: 0;
+              background-color: #f0f0f0;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 100vh;
+          }
+
+          .container {
+              text-align: center;
+          }
+
+          #countdown {
+              font-size: 60px;
+              font-weight: bold;
+              color: #333;
+          }
+
+          .video-container {
+              margin-top: 20px;
+          }
+
+          video {
+              width: 100%;
+              max-width: 800px;
+              border-radius: 10px;
+          }
+      </style>
+  </head>
+  <body>
+      <div class="container">
+          <!-- Đếm ngược -->
+          <div id="countdown">3</div>
+          <div class="video-container" style="display: none;">
+              <video controls id="myVideo">
+                  <source src="img/video.mp4" type="video/mp4">
+              </video>
+          </div>
+      </div>
+   
+  </body>
+</html>
+<script>
+    let countdownElement = document.getElementById('countdown');
+    let videoContainer = document.querySelector('.video-container');
+    let videoElement = document.getElementById('myVideo');
+    let countdown = 3;
+    function startCountdown() {
+        let countdownInterval = setInterval(function () {
+            countdownElement.textContent = countdown;
+            countdown--;
+            if (countdown < 0) {
+                clearInterval(countdownInterval);
+                countdownElement.style.display = 'none'; 
+                videoContainer.style.display = 'block'; 
+                videoElement.play();
+            }
+        }, 1000);
+    }
+    window.onload = startCountdown;
+</script>
