@@ -15,5 +15,5 @@ const CONFIG = {
     mess: 'Anh biết mà 🥰. Yêu em nhiều nhiều 😘😘',
     messDesc: 'Hạnh phúc của anh là có em đó hihi.',
     btnAccept: 'Điều đặc biệt',
-    messLink: 'C:/Users/vanqu/Videos/Video/tang-crush-main/video.html' 
+    messLink: '/video.html' 
 }
